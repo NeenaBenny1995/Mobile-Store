@@ -1,0 +1,24 @@
+<!DOCTYPE html >
+{%extends 'customer_base.html'%}
+
+{%block body_block%}
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+        {{order.mobile.mobile_name}}
+    </div>
+    <div class="col-4"></div>
+</div>
+<div class="row mt-2">
+    <div class="col-4"></div>
+    <div class="col-4">
+        <form action="" method="post">
+            {%csrf_token%}
+            {{form.as_p}}
+            <input type="submit" value="place order">
+        </form>
+    </div>
+    <div class="col-4"></div>
+</div>
+
+{%endblock%}

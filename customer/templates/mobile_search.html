@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="get">
+    {{filter.form.as_p}}
+    <input type="submit" value="search">
+    {%for mobile in filter.qs%}
+
+    <div>
+        {{mobile.mobile_name}}
+    </div>
+
+    {%endfor%}
+</form>
+</body>
+</html>

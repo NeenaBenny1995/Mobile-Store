@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{%load static%}
+{%block body_block%}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <h2>Brand Details</h2>
+            <form action="" method="post">
+
+                {{mobile}}
+            </form>
+
+            <div class="card" style="width: 18rem;">
+  <img  src="{{mobile.image.url}}" alt="" style="width:80px; height:80px;" class="card-img-top">
+                <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{mobile.mobile_name}}</li>
+
+  </ul>
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{mobile.brand}}</li>
+
+  </ul>
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{mobile.price}}</li>
+
+  </ul>
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{mobile.memory}}</li>
+
+  </ul>
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{mobile.os}}</li>
+
+  </ul>
+                     <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{mobile.specs}}</li>
+
+  </ul>
+
+
+</div>
+
+
+
+</div>
+
+
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+{%endblock%}

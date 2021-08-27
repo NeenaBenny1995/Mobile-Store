@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{%extends 'customer_base.html'%}
+
+{%block body_block%}
+<div class="container-fluid mt3">
+  <div class="row mt-2">
+    {%for mobile in mobiles%}
+       <div class="col-4 mt-2">
+           <div class="card" style="width: 12rem;">
+     <img src="{{mobile.image.url}}" class="card-img-top" alt="...">
+     <div class="card-body">
+       <h5 class="card-title">{{mobile.mobile_name}}</h5>
+        </div>
+     <ul class="list-group list-group-flush">
+       <li class="list-group-item">{{mobile.price}}</li>
+       <li class="list-group-item">{{mobile.os}}</li>
+       <li class="list-group-item">{{mobile.brand}}</li>
+     </ul>
+     <div class="card-body">
+       <a href="{%url 'addtocart' mobile.id %}" class="card-link">Buy Now</a>
+     </div>
+   </div>
+   
+       </div>
+       {%endfor%}
+   </div>
+   {%endblock%}
+
+</div>

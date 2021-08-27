@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{%load static%}
+
+{%block body_block%}
+<div class="container">
+<!--    <div class="row">-->
+<!--        <div class="col-4"></div>-->
+<!--        <div class="col-4"></div>-->
+<!--        <div class="col-4">-->
+<!--            <form action="" method="post">-->
+<!--                {%csrf_token%}-->
+<!--                {{form.as_p}}-->
+<!--                  <input type="submit" value="search">-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="row">
+       <div class="col-2"></div>
+       <div class="col-8">
+         <h2>View Brands</h2>
+         <table class="table">
+             <tr>
+                 <th>Mobile</th>
+                 <th>Brand</th>
+                 <th>price</th>
+                 <th>images</th>
+                 <th>action</th>
+
+
+             </tr>
+
+             {%for mobile in mobiles%}
+             <tr>
+                 <td>{{mobile.mobile_name}}</td>
+                 <td>{{mobile.brand}}</td>
+               <td>{{mobile.price}}</td>
+                 <td><img src="{{mobile.image.url}}" alt="" style="width:80px; height:80px;"></td>
+                 <td>
+                     <a href="{%url 'mobileedit' mobile.id%}" class="btn btn-outline-warning">edit</a>
+                     <a href="{%url 'mobiledelete' mobile.id%}" class="btn btn-outline-danger">delete</a>
+                     <a href="{%url 'viewmobile' mobile.id%}" class="btn btn-outline-info">view</a>
+                 </td>
+
+
+
+             </tr>
+             {%endfor%}
+
+
+       </div>
+       <div class="col-2"></div>
+     </div>
+   </div>
+{%endblock%}

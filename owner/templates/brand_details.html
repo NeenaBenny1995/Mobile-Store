@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{%load static%}
+{%block body_block%}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <h2>Brand Details</h2>
+            <form action="" method="post">
+
+                {{brand}}
+               <div class="card" style="width: 18rem;">
+
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{brand.brand_name}}</li>
+
+  </ul>
+</div>
+            </form>
+
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+{%endblock%}
